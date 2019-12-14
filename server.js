@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const SALT_WORK_FACTOR = 10;
+var path = require('path');
 
 const app = express();
 app.use(cookieParser());
@@ -17,14 +18,14 @@ const conn = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
-  database: "unaux_23818016_lms_nkk"
+  database: "lms_nkk"
 });
 conn.connect(err => {
     if (err) return err
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.sendFile(path.resolve(__dirname + '../index.html'));
 });
 app.get('/article/:id?',(req,res)=>{
     const paramId = req.params.id;
