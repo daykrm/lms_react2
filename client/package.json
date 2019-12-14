@@ -2,7 +2,11 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "proxy": "http://185.27.134.10",
+=======
+  "proxy": "https://localhost:5000",
+>>>>>>> ef7829394e39ca1887548b424e99d06e08cff80f
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^15.0.0",
     "@ckeditor/ckeditor5-react": "^1.1.3",
