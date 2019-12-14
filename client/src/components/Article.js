@@ -16,29 +16,16 @@ export default class Article extends Component {
   }
   componentWillUnmount() {}
   getData = () => {
-    Axios.get("/article").then(res => {
+    Axios.get("/").then(res => {
       this.setState({ data: res.data });
     });
   };
-  renderData = ({ artID, artName }) => (
-    <Row>
-      <Col xs={12}>
-        <Card key={artID} className="MarginTop">
-          <Card.Body>
-            <Link to={`/article/${artID}`}>
-              <A href="#">{artName}</A>
-            </Link>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
-  ); 
-    
+  
   render() {
     const { data } = this.state;
     return (
       <div>
-        <Container>{data.map(this.renderData)}</Container>
+        <Container>{data}</Container>
       </div>
     );
   }

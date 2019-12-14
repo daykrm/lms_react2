@@ -29,7 +29,7 @@ app.get('*', function(req, res) {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 app.get('/', function(req,res){
-  res.send('Hello World');
+  res.send(process.env.DB_HOST);
 });
 app.get('/article/:id?',(req,res)=>{
     const paramId = req.params.id;
