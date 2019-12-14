@@ -17,7 +17,7 @@ const conn = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
-  database: "lms_nkk"
+  database: "unaux_23818016_lms_nkk"
 });
 conn.connect(err => {
     if (err) return err
