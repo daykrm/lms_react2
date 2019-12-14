@@ -32,7 +32,8 @@ export default class Article extends Component {
         </Card>
       </Col>
     </Row>
-  );
+  ); 
+    
   render() {
     const { data } = this.state;
     return (
