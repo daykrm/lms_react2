@@ -48,7 +48,7 @@ app.post('/addart',(req,res)=>{
     else res.send('Add Article Successful !!')
   })
 })
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server listening on port : ${PORT}`);
 });
