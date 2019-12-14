@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+.App-logo {
+  height: 40vmin;
+}
+.App-header {
+  background-color: #ff2667;
+  color: white;
+}
+.App-body {
+  background-color: #ffffff;
+  color: #ff2667;
+}
+.MyTable{
+  padding-left:10px;
+  display:block;
+  color:rgb(255, 255, 255);
+  background-color: #ff2667;
+}
+::selection{
+  background:#ff2667;
+  color:white;
+}
+h4{
+  font-family: 'Roboto', sans-serif;
+  color: #ff2667;
+}
+.MarginTop{
+  margin-top : 30px;
+}
+.custombtn{
+  background-color: #ff2667;
+  color: black;
+}
+.btn-flat {
+  background-color: #ff2667;
+  color: white;
+}
+
+.btn-xxl {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+}
