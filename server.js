@@ -25,7 +25,8 @@ conn.connect(err => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname + '../index.html'));
+  //res.sendFile(path.resolve(__dirname + '../index.js'));
+  res.send(__dirname);
 });
 app.get('/article/:id?',(req,res)=>{
     const paramId = req.params.id;
