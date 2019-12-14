@@ -16,10 +16,10 @@ app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 const conn = mysql.createConnection({
-  host: "sql106.unaux.com",
-  user: "unaux_23818016",
-  password: "d0854004076",
-  database: "unaux_23818016_lms_nkk"
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 });
 conn.connect(err => {
     if (err) return err
