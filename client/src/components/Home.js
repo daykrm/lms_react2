@@ -10,7 +10,7 @@ export default class Home extends Component {
         <center>
           <h4 className="MarginTop">Computing science - Nakorn Khon Kaen School</h4>
         </center>
-        
+        <Article/>
       </div>
     );
   }
