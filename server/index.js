@@ -29,6 +29,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
+
 app.get('/article/:id?',(req,res)=>{
     const paramId = req.params.id;
     //const queryId = req.query.id;

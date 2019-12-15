@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, Container} from "react-bootstrap";
 import Article from "./Article";
-import Test from "./Test";
 
 export default class Home extends Component {
   render() {
