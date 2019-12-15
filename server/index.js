@@ -23,6 +23,11 @@ conn.connect(err => {
 app.get('*', function(req, res) {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
+
+app.get('/', function(req,res){
+  res.send('Hello World')
+})
+
 app.get('/article/:id?',(req,res)=>{
     const paramId = req.params.id;
     //const queryId = req.query.id;
