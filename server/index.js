@@ -15,7 +15,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-const conn = mysql.createConnection(process.env.CLEARDB_COBALT_URL);
+const conn = mysql.createConnection({
+  host:process.env.DB_HOST,
+  user:process.env.DB_USER,
+  password:process.env.DB_PASS,
+  database:process.env.DB_NAME
+});
 conn.connect(err => {
     if (err) return err
 });
