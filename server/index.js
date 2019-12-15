@@ -16,11 +16,12 @@ app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 const conn = mysql.createConnection({
-  host:process.env.DB_HOST,
-  user:process.env.DB_USER,
-  password:process.env.DB_PASS,
-  database:process.env.DB_NAME
+  host: 'us-cdbr-iron-east-05.cleardb.net',
+  user:'b09042b989ce16',
+  password:'a52e74ec',
+  database:'heroku_77e0386e8b781cf'
 });
+
 conn.connect(err => {
     if (err) return err
 });
@@ -29,6 +30,10 @@ app.get('/', function(req, res) {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
+app.get('/test' ,function(req,res){
+  console.log(conn)
+  res.end()
+})
 
 app.get('/article/:id?',(req,res)=>{
     const paramId = req.params.id;
@@ -54,4 +59,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server listening on port : ${PORT}`);
 });
-conn.end();
